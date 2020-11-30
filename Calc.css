@@ -19,8 +19,17 @@
 
 .display {
   color: white;
-  align-items: center;
   text-align: center;
-  height: 120px;
-  justify-content: center;
+  height: 121px;
+}
+
+.topDisplay{
+  height: 30%;
+  font-size: 1.5em;
+}
+.bottomDisplay{
+  height: 50%;
+  font-size: 3em;
+  
+
 }
