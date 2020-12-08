@@ -65,7 +65,7 @@ h1 {
   left: 0;
   background: url("https://www.techinn.com/f/13776/137769822/sony-ps5-digital-edition.jpg");
   background-repeat: none;
-  background-size: cover;
+
 }
 
 .split.left::before {
@@ -80,7 +80,6 @@ h1 {
   right: 0;
   background: url("https://www.techinn.com/f/13777/137776929/microsoft-xbox-series-x-1tb.jpg");
   background-repeat: none;
-  background-size: cover;
 }
 .split.right::before {
   content: "";
