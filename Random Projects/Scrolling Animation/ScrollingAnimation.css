@@ -14,10 +14,13 @@ body {
   background-color: #efedd6;
 }
 
-h1{
+h1 {
   margin: 10px;
 }
-.box{
+h2 {
+  font-size: 45px;
+}
+.box {
   background-color: blue;
   color: #fdff;
   align-items: center;
@@ -27,15 +30,14 @@ h1{
   height: 200px;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
-  transform:translateX(200%);
-  transition: transform 0.5 ease;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(200%);
+  transition: transform 0.5s ease;
 }
-.box:nth-of-type(even){
-  transform:translateX(-200%);
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
 }
 
-
-.box.show{
+.box.show {
   transform: translateX(0);
 }
