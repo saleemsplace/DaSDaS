@@ -3,21 +3,20 @@ const sounds=['Barz', 'GetEm','Doom', 'Man','Perish','Toasted']
 sounds.forEach(sound => {
     const btn = document.createElement('button')
     btn.classList.add('btn')
-
+   
     btn.innerText = sound
     btn.addEventListener('click', () => {
       stopSongs()
     
 
         document.getElementById(sound).play()
+          
+   let x = event.target.tagName
     })
-
+    
     document.getElementById('buttons').appendChild(btn)
- let current = sound
- return current
+   
 })
-
-let currentSong = current
 
 function stopSongs() {
     sounds.forEach(sound => {
@@ -54,13 +53,3 @@ function ControlSongs() {
 
     })
 }
-
-
-
-control.addEventListener('click',() =>{
-    ControlSongs()
-})
-controlPlay.addEventListener('click',() =>{
- currentSong.play()
-  
-})
