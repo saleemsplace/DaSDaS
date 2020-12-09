@@ -1,55 +1,61 @@
-const sounds=['Barz', 'GetEm','Doom', 'Man','Perish','Toasted']
+const sounds = ["Barz", "GetEm", "Doom", "Man", "Perish", "Toasted"];
 
-sounds.forEach(sound => {
-    const btn = document.createElement('button')
-    btn.classList.add('btn')
-   
-    btn.innerText = sound
-    btn.addEventListener('click', () => {
-      stopSongs()
-    
+sounds.forEach((sound) => {
+  const btn = document.createElement("button");
+  btn.classList.add("btn");
+  btn.innerText = sound;
 
-        document.getElementById(sound).play()
-          
-   let x = event.target.tagName
-    })
-    
-    document.getElementById('buttons').appendChild(btn)
-   
-})
+  btn.addEventListener("click", () => {
+    const currentSong = document.getElementById(sound);
+
+    stopSongs();
+    document.getElementById(sound).play();
+
+    document.getElementById("pause-play").onclick = function () {
+      if (checkText() === "isPaused") {
+        pauseSongs();
+        changeText();
+      } else {
+        currentSong.play();
+        changeText();
+      }
+    };
+  });
+
+  document.getElementById("buttons").appendChild(btn);
+});
 
 function stopSongs() {
-    sounds.forEach(sound => {
-     const song = document.getElementById(sound)
-
-        song.pause()
-        song.currentTime =0;
-       
-
-    })
-}
-function playPausedSongs() {
-    sounds.forEach(sound => {
-     const song = document.getElementById(sound)
-
-        song.pause()
-       
-
-    })
+  sounds.forEach((sound) => {
+    const song = document.getElementById(sound);
+    const text = document.getElementById("pause-play");
+    text.innerHTML = "Pause";
+    song.pause();
+    song.currentTime = 0;
+  });
 }
 
+function pauseSongs() {
+  sounds.forEach((sound) => {
+    const song = document.getElementById(sound);
+    song.pause();
+  });
+}
 
-const control = document.getElementById('control')
-const controlPlay = document.getElementById('controlPlay')
-const audio = document.getElementsByClassName('audio')
+function checkText() {
+  const text = document.getElementById("pause-play");
+  if (text.innerHTML === "Pause") {
+    return "isPaused";
+  } else {
+    return "isPlaying";
+  }
+}
 
-
-function ControlSongs() {
-    sounds.forEach(sound => {
-     const song = document.getElementById(sound)
-
-        song.pause()
-      
-
-    })
+function changeText() {
+  const text = document.getElementById("pause-play");
+  if (text.innerHTML === "Pause") {
+    text.innerHTML = "Play";
+  } else {
+    text.innerHTML = "Pause";
+  }
 }
