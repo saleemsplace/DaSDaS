@@ -1,5 +1,7 @@
 import React from 'react';
-import Hello from 'Hello.js';
+import Hello from './Hello';
+
+
 
 
 
@@ -7,7 +9,7 @@ function App() {
   return(
     <div>
       <h1>Test</h1>
-      <Hello />
+     <Hello />
     </div>
   );
   }

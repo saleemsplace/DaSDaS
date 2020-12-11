@@ -14,4 +14,5 @@ window.addEventListener('keydown', (event) => {
   ${event.code}
     <small>event.code</small>
   </div>`;
+  console.log(event)
 });
