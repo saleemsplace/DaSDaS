@@ -23,7 +23,7 @@ const topDisplay = document.getElementById("topDisplay")
 const numberArr= [zero, one, two, three, four, five, six, seven, eight, nine];
 
 
-// Functions 
+// Functions and more
 
 
 const getBottomValueStr = () => {
