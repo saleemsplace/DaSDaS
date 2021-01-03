@@ -42,13 +42,20 @@ img {
 }
 
 .card-title {
-  height: 20px;
+  height: 30px;
   margin: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .card-excerpt {
   color: #777;
   margin: 10px 0 20px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
 }
 
 .author {
@@ -83,8 +90,8 @@ img {
     #a3c8ec 20%,
     #f6f7f8 100%
   );
-  background-size: 200% 100%;
-  animation: bgPos 1.5s linear infinite;
+  background-size:  100%;
+  animation: bgPos 2.5s linear infinite;
 }
 
 .animated-bg-text {
