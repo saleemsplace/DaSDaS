@@ -11,6 +11,13 @@ ratingsContainer.addEventListener('click', (e) => {
         selectedRating = e.target.nextElementSibling.innerHTML
     }
 })
+ratingsContainer.addEventListener('click', (e) => {
+    if(e.target.classList.contains('rating')) {
+        removeActive()
+        e.target.classList.add('active')
+        selectedRating = e.target.nextElementSibling.innerHTML
+    }
+})
 
 sendBtn.addEventListener('click', (e) => {
     panel.innerHTML = `
